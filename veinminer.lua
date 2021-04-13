@@ -28,9 +28,12 @@ while true do
         end
     end 
 
+    turtle.turnRight()
+    turtle.turnRight()
+
     turtle.down()
     ylevel = ylevel + 1
     
-    break
+    
 
 end
