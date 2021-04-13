@@ -5,6 +5,8 @@ local function staircase()
     return false
 end 
 
+local ylevel = 0
+
 
 while true do
     turtle.dig()
@@ -13,13 +15,18 @@ while true do
     for i = 1, 5 do
         turtle.digDown()
         turtle.dig()
-        turtle.forward()
-
+        if not turtle.forward() then
+            turtle.refuel()
+        end
+    end
+    turtle.turnRight()
+    turtle.turnRight()
+    for i = 1, 5 do
+        if not turtle.forward() then
+            turtle.refuel()
+        end
     end 
     
-    
-
-
-
+    break
 
 end
