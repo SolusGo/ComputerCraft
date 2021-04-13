@@ -19,6 +19,7 @@ while true do
             turtle.refuel()
         end
     end
+    turtle.dig()
     turtle.turnRight()
     turtle.turnRight()
     for i = 1, 5 do
@@ -26,6 +27,9 @@ while true do
             turtle.refuel()
         end
     end 
+
+    turtle.down()
+    ylevel = ylevel + 1
     
     break
 
